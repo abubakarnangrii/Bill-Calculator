@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <title>Grand Total Bill</title>
+        <link type="text/css" rel="stylesheet" href="style.css">    </head>
+<body>
+    <div id="cal_div">
+         <label class="text">Total Bill:</label>
+        <input type="number" id="totalBill" onchange="calculateGrandTotal()">
+        <br>
+
+        <label class="text">Total Discount:</label>
+        <input type="number" id="totalDiscount" onchange="calculateGrandTotal()">
+        <br>
+
+        <label class="text">Sales Tax (%):</label>
+        <input type="number" id="salesTax" onchange="calculateGrandTotal()">
+        <br>
+
+        <p  id="grandTotal"></p>
+    </div>
+       
+
+  <script>
+    function calculateGrandTotal() {
+      var totalBill = parseFloat(document.getElementById('totalBill').value) || 0;
+      var totalDiscount = parseFloat(document.getElementById('totalDiscount').value) || 0;
+      var salesTaxPercentage = parseFloat(document.getElementById('salesTax').value) || 0;
+
+      var grandTotal = totalBill - ((totalDiscount / 100)*100) -  ((salesTaxPercentage / 100)*100);
+
+      document.getElementById('grandTotal').textContent = "Grand Total: " + grandTotal.toFixed(2);
+    }
+  </script>
+</body>
+</html>

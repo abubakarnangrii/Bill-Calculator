@@ -1,0 +1,47 @@
+<html>
+    <head>
+        
+    </head>
+    <body>
+        
+
+        <!-- Click on using javascript addeventclick-->
+        <p1 id="p1"></p1><br>
+        <p1 id="p2"></p1><br>
+        <br>
+        <button id="btn1">btn1</button>
+        <button id="btn2">btn2</button>
+        <script>
+           document.getElementById("btn1").addEventListener("click",fun11);
+           document.getElementById("btn2").addEventListener("click",fun22);
+            function fun11(){
+                document.getElementById("p1").innerHTML = "click btn 1";
+                document.getElementById("p1").style.background="red";
+                document.getElementById("p1").style.color="blue";
+                document.getElementById("p1").width = "100px";
+                
+                
+                alert("btn1 click");
+            }
+            function fun22(){
+                document.getElementById("p2").innerHTML = "click btn 2";
+                document.getElementById("p2").style.background="black";
+                document.getElementById("p2").style.color="white";
+                document.getElementById("p2").width = "150px";
+                
+                alert("btn2 click");
+            }
+        </script>
+        <br>
+
+        
+    </body>
+</html>
+
+
+
+
+
+
+
+
